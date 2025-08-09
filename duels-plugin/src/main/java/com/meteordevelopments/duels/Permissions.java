@@ -23,6 +23,7 @@ public final class Permissions {
     public static final String PARTY = "duels.party";
     public static final String PARTY_LIST_OTHERS = PARTY + ".list.others";
     public static final String PARTY_TOGGLE = PARTY + ".toggle";
+    public static final String REPLAY = "duels.replay";
 
     private Permissions() {
     }

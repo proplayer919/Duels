@@ -359,6 +359,8 @@ COMMAND:
       - '&7Queue Signs: &f%queue_signs%'
       - '&7Duel lobby is located at &f%lobby%&7.'
       - '{LINE}'
+    replay:
+      disabled: '{PREFIX} &cThe replay system is currently disabled.'
 
   spectate:
     usage:
@@ -691,3 +693,45 @@ GUI:
           - '&c&lNOT BOUND'
           - ' '
           - '&r&lCLICK TO TOGGLE'
+  replay:
+    title: '&9Match Replays (Page %page%)'
+    disabled:
+      name: '&cReplays Disabled'
+      lore:
+        - '&7The replay system is currently'
+        - '&7disabled on this server.'
+    no-replays:
+      name: '&7No Replays Found'
+      lore:
+        - '&7You haven''t participated in any'
+        - '&7recorded matches yet.'
+        - ' '
+        - '&7Replays will appear here after'
+        - '&7completing duels.'
+    item:
+      name: '&e&lVS %opponents% &8(&3%kit%&8)'
+      lore:
+        - '&7Arena: &f%arena%'
+        - '&7Duration: &f%duration%'
+        - '&7Date: &f%date%'
+        - '&7Status: &f%status%'
+        - ' '
+        - '&a&lCLICK TO WATCH'
+    close:
+      name: '&c&lClose'
+    previous:
+      name: '&a&l← Previous Page'
+      lore:
+        - '&7Go to page %page%'
+    next:
+      name: '&a&lNext Page →'
+      lore:
+        - '&7Go to page %page%'
+    page-info:
+      name: '&9&lPage %current%/%total%'
+      lore:
+        - '&7Total Replays: &f%replays%'
+    replay-in-progress: '{PREFIX} &cThis replay is still being recorded!'
+    starting-replay: '{PREFIX} &aStarting replay playback...'
+    error-starting: '{PREFIX} &cFailed to start replay playback.'
+    unavailable: '{PREFIX} &cReplay system is currently unavailable.'

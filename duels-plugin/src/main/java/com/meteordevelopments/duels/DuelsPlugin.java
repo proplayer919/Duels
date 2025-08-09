@@ -114,6 +114,8 @@ public class DuelsPlugin extends JavaPlugin implements Duels, LogSource {
     private PartyManagerImpl partyManager;
     @Getter
     private ValidatorManager validatorManager;
+    @Getter
+    private com.meteordevelopments.duels.replay.ReplayManager replayManager;
     private static final Logger LOGGER = Logger.getLogger("[Duels-Optimised]");
 
     @Override
@@ -470,6 +472,7 @@ public class DuelsPlugin extends JavaPlugin implements Duels, LogSource {
         loadAndTrack("queue signs", () -> loadables.add(queueSignManager = new QueueSignManagerImpl(this)));
         loadAndTrack("request manager", () -> loadables.add(requestManager = new RequestManager(this)));
         loadAndTrack("hook manager", () -> hookManager = new HookManager(this));
+        loadAndTrack("replay manager", () -> loadables.add(replayManager = new com.meteordevelopments.duels.replay.ReplayManager(this)));
         loadAndTrack("validator manager", () -> loadables.add(validatorManager = new ValidatorManager(this)));
         loadAndTrack("teleport manager", () -> loadables.add(teleport = new Teleport(this)));
         loadAndTrack("extension manager", () -> loadables.add(extensionManager = new ExtensionManager(this)));

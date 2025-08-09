@@ -25,5 +25,6 @@ public class HookManager extends AbstractHookManager<DuelsPlugin> {
         register(VaultHook.NAME, VaultHook.class);
         register(WorldGuardHook.NAME, WorldGuardHook.class);
         register(AxGravesHook.NAME, AxGravesHook.class);
+        register(AdvancedReplayHook.NAME, AdvancedReplayHook.class);
     }
 }
